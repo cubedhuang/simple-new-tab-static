@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>new tab</title>
+
+		<link rel="stylesheet" href="style.css" />
+
+		<script defer src="./twind/twind.umd.js"></script>
+		<script defer src="./twind/observe.umd.js"></script>
+		<script defer src="./twind/shim.umd.js"></script>
+
+		<script defer src="lanyard.js"></script>
+		<script defer src="script.js"></script>
+	</head>
+
+	<body class="bg-black text-gray-400 font-mono p-16">
+		<div class="flex gap-8">
+			<div class="flex-1 flex flex-col gap-4">
+				<h1 class="text-white">new tab</h1>
+
+				<div>
+					<blockquote id="quote"></blockquote>
+					<cite id="quote-author"></cite>
+				</div>
+
+				<ul>
+					<li class="text-white">school</li>
+					<li>
+						- <a href="https://studentportal.educationincites.com/#/Home"
+							class="underline">ctls</a>
+					</li>
+					<li>- <a href="https://canvas.instructure.com" class="underline">canvas</a></li>
+					<li>- <a href="https://gavirtual.instructure.com" class="underline">gavs</a>
+					</li>
+					<li>- <a href="https://gatech.instructure.com" class="underline">ga tech</a>
+					</li>
+				</ul>
+
+				<ul>
+					<li class="text-white">stuff</li>
+					<li>- <a href="https://youtube.com" class="underline">youtube</a></li>
+					<li>- <a href="https://gmail.com" class="underline">gmail</a></li>
+				</ul>
+			</div>
+
+			<div class="flex flex-col gap-4 text-right">
+				<span>
+					<span class="text-white">Now</span><br>
+					<span id="clock" class="whitespace-pre-wrap"></span>
+				</span>
+
+				<ul id="presence" class="flex flex-col gap-4"></ul>
+			</div>
+		</div>
+	</body>
+</html>

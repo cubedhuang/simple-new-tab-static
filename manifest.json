@@ -1,0 +1,32 @@
+{
+	"manifest_version": 3,
+	"name": "simple new tab",
+	"version": "1.0",
+	"description": "a minimalistic new tab page",
+	"author": "cubedhuang",
+	"chrome_url_overrides": {
+		"newtab": "index.html"
+	},
+	"permissions": [
+		"activeTab",
+		"tabs",
+		"storage",
+		"cookies",
+		"contextMenus",
+		"webNavigation",
+		"webRequest",
+		"notifications"
+	],
+	"content_scripts": [
+		{
+			"js": ["script.js"],
+			"matches": ["http://*/*", "https://*/*"]
+		}
+	],
+	"web_accessible_resources": [
+		{
+			"resources": ["script.js"],
+			"matches": ["http://*/*", "https://*/*"]
+		}
+	]
+}

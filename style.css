@@ -1,0 +1,8 @@
+html {
+	background: black;
+}
+
+body {
+	/* For some reason, my browser injected font-size: 75%. */
+	font-size: 100% !important;
+}
