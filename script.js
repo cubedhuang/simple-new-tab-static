@@ -3,7 +3,7 @@
 const quote = document.getElementById("quote");
 const quoteAuthor = document.getElementById("quote-author");
 
-fetch("https://api.quotable.io/random?tags=future|technology|science")
+fetch("https://api.quotable.io/random?tags=future|technology|science|time")
 	.then(res => res.json())
 	.then(data => {
 		quote.textContent = `"${data.content}"`;
