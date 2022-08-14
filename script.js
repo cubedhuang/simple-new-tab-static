@@ -36,18 +36,18 @@ setClock();
 
 // ----- Presence -----
 
-const ul = document.getElementById("presence");
+const presenceElement = document.getElementById("presence");
 
 lanyard({
 	userId: "299707523370319883",
 	socket: true,
 	onPresenceUpdate(presence) {
-		ul.innerHTML = presence.activities
+		presenceElement.innerHTML = presence.activities
 			.map(({ name, state, details }) => {
 				return `<div>
 					<h2 class="text-white">${name}</h2>
-					${state ? `${state}` : ""}
-					${details ? `<br>${details}` : ""}
+					<p>${state || ""}</p>
+					<p>${details || ""}</p>
 				</div>`;
 			})
 			.join("");
