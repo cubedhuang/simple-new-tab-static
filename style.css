@@ -1,8 +1,59 @@
-html {
-	background: black;
+body {
+	padding: 4rem;
+
+	background: #19101d;
+
+	/* For some reason, my browser injected font-size: 75% */
+	font-size: 100% !important;
+	font-family: "Roboto Mono", ui-monospace, monospace !important;
+
+	color: #a5acb6;
 }
 
-body {
-	/* For some reason, my browser injected font-size: 75%. */
-	font-size: 100% !important;
+/* Generic styles */
+
+ul > li::before {
+	content: "- ";
+}
+
+/* ----- Utility styles */
+
+/* Text */
+
+.text-white {
+	color: white;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+/* Layout */
+
+.flex {
+	display: flex;
+}
+
+.flex-col {
+	flex-direction: column;
+}
+
+.flex-1 {
+	flex: 1;
+}
+
+.gap-8 {
+	gap: 2rem;
+}
+
+.gap-6 {
+	gap: 1.5rem;
+}
+
+.gap-4 {
+	gap: 1rem;
 }

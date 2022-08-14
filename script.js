@@ -1,5 +1,3 @@
-const { tw } = twind;
-
 // ----- Quote -----
 
 const quote = document.getElementById("quote");
@@ -46,11 +44,11 @@ lanyard({
 	onPresenceUpdate(presence) {
 		ul.innerHTML = presence.activities
 			.map(({ name, state, details }) => {
-				return `<li>
-					<span class="${tw`text-white`}">${name}</span>
-					${state ? `<br>${state}` : ""}
+				return `<div>
+					<h2 class="text-white">${name}</h2>
+					${state ? `${state}` : ""}
 					${details ? `<br>${details}` : ""}
-				</li>`;
+				</div>`;
 			})
 			.join("");
 	}

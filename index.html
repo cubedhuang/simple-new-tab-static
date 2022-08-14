@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<title>new tab</title>
 
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="preflight.css">
+		<link rel="stylesheet" href="style.css">
 
-		<script defer src="./twind/twind.umd.js"></script>
-		<script defer src="./twind/observe.umd.js"></script>
-		<script defer src="./twind/shim.umd.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&display=swap"
+			rel="stylesheet">
 
 		<script defer src="lanyard.js"></script>
 		<script defer src="script.js"></script>
 	</head>
 
-	<body class="bg-black text-gray-400 font-mono p-16">
+	<body>
 		<div class="flex gap-8">
-			<div class="flex-1 flex flex-col gap-4">
+			<div class="flex-1 flex flex-col gap-6">
 				<h1 class="text-white">new tab</h1>
 
 				<div>
@@ -27,33 +29,45 @@
 					<cite id="quote-author"></cite>
 				</div>
 
-				<ul>
-					<li class="text-white">school</li>
-					<li>
-						- <a href="https://studentportal.educationincites.com/#/Home"
-							class="underline">ctls</a>
-					</li>
-					<li>- <a href="https://canvas.instructure.com" class="underline">canvas</a></li>
-					<li>- <a href="https://gavirtual.instructure.com" class="underline">gavs</a>
-					</li>
-					<li>- <a href="https://gatech.instructure.com" class="underline">ga tech</a>
-					</li>
-				</ul>
+				<div>
+					<h2 class="text-white">school</h2>
+					<ul>
+						<li>
+							<a href="https://studentportal.educationincites.com/#/Home"
+								class="underline">ctls</a>
+						</li>
+						<li>
+							<a href="https://canvas.instructure.com" class="underline">canvas</a>
+						</li>
+						<li>
+							<a href="https://gavirtual.instructure.com" class="underline">gavs</a>
+						</li>
+						<li>
+							<a href="https://gatech.instructure.com" class="underline">gt</a>
+						</li>
+					</ul>
+				</div>
 
-				<ul>
-					<li class="text-white">stuff</li>
-					<li>- <a href="https://youtube.com" class="underline">youtube</a></li>
-					<li>- <a href="https://gmail.com" class="underline">gmail</a></li>
-				</ul>
+				<div>
+					<h2 class="text-white">stuff</h2>
+					<ul>
+						<li>
+							<a href="https://youtube.com" class="underline">youtube</a>
+						</li>
+						<li>
+							<a href="https://gmail.com" class="underline">gmail</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 
-			<div class="flex flex-col gap-4 text-right">
-				<span>
-					<span class="text-white">Now</span><br>
-					<span id="clock" class="whitespace-pre-wrap"></span>
-				</span>
+			<div class="flex flex-col gap-6 text-right">
+				<div>
+					<h2 class="text-white">Now</h2>
+					<span id="clock"></span>
+				</div>
 
-				<ul id="presence" class="flex flex-col gap-4"></ul>
+				<div id="presence" class="flex flex-col gap-6"></div>
 			</div>
 		</div>
 	</body>
