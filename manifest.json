@@ -16,17 +16,5 @@
 		"webNavigation",
 		"webRequest",
 		"notifications"
-	],
-	"content_scripts": [
-		{
-			"js": ["script.js"],
-			"matches": ["http://*/*", "https://*/*"]
-		}
-	],
-	"web_accessible_resources": [
-		{
-			"resources": ["script.js"],
-			"matches": ["http://*/*", "https://*/*"]
-		}
 	]
 }
