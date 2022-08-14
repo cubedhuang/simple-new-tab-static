@@ -1,3 +1,9 @@
+/**
+ * Source from https://github.com/xaronnn/js-lanyard
+ */
+
+"use strict";
+
 const CONSTANTS = {
 	API_URL: "https://api.lanyard.rest/v1",
 	WEBSOCKET_URL: "wss://api.lanyard.rest/socket",
