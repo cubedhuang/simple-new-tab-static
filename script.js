@@ -38,7 +38,7 @@ const tf = new Intl.DateTimeFormat("en", {
 
 function setClock() {
 	const date = new Date();
-	clock.innerText = `${df.format(date)}\n${tf.format(date)}`;
+	clock.textContent = `${df.format(date)}\n${tf.format(date)}`;
 }
 
 setInterval(() => setClock(), 1000);
