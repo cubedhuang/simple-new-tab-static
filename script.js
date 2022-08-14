@@ -41,13 +41,18 @@ const presenceElement = document.getElementById("presence");
 lanyard({
 	userId: "299707523370319883"
 }).then(presence => {
-	presenceElement.innerHTML = presence.activities
-		.map(({ name, state, details }) => {
-			return `<div>
+	presenceElement.innerHTML =
+		`<div>
+			<h2>Discord</h2>
+			<p>${presence.discord_user.username}#${presence.discord_user.discriminator}</p>
+		</div>` +
+		presence.activities
+			.map(({ name, state, details }) => {
+				return `<div>
 					<h3>${name}</h3>
 					<p>${state || ""}</p>
 					<p>${details || ""}</p>
 				</div>`;
-		})
-		.join("");
+			})
+			.join("");
 });
