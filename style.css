@@ -40,12 +40,12 @@ ul > li > a {
 
 /* Layout */
 
-.flex {
-	display: flex;
+.flow > * + * {
+	margin-top: 1.5rem;
 }
 
-.flex-col {
-	flex-direction: column;
+.flex {
+	display: flex;
 }
 
 .flex-1 {
@@ -54,10 +54,6 @@ ul > li > a {
 
 .gap-8 {
 	gap: 2rem;
-}
-
-.gap-6 {
-	gap: 1.5rem;
 }
 
 .gap-4 {
