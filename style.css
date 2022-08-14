@@ -12,8 +12,18 @@ body {
 
 /* Generic styles */
 
+h1,
+h2,
+h3 {
+	color: white;
+}
+
 ul > li::before {
 	content: "- ";
+}
+
+ul > li > a {
+	text-decoration: underline;
 }
 
 /* ----- Utility styles */
@@ -26,10 +36,6 @@ ul > li::before {
 
 .text-right {
 	text-align: right;
-}
-
-.underline {
-	text-decoration: underline;
 }
 
 /* Layout */

@@ -44,7 +44,7 @@ lanyard({
 	presenceElement.innerHTML = presence.activities
 		.map(({ name, state, details }) => {
 			return `<div>
-					<h2 class="text-white">${name}</h2>
+					<h3>${name}</h3>
 					<p>${state || ""}</p>
 					<p>${details || ""}</p>
 				</div>`;
