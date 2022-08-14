@@ -1,3 +1,13 @@
+// ----- Focus/Unfocus -----
+
+addEventListener("blur", () => {
+	document.body.classList.add("unfocused");
+});
+
+addEventListener("focus", () => {
+	document.body.classList.remove("unfocused");
+});
+
 // ----- Quote -----
 
 const quote = document.getElementById("quote");

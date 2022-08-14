@@ -8,6 +8,12 @@ body {
 	font-family: "Roboto Mono", ui-monospace, monospace !important;
 
 	color: #a5acb6;
+
+	transition: background 300ms;
+}
+
+body.unfocused {
+	background: #1b1b1b;
 }
 
 /* Generic styles */
