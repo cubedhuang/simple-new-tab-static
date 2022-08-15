@@ -1,6 +1,6 @@
 # Simple New Tab
 
-A minimalistic new tab page, inspired by my friend's portfolio, [neb.bio](https://neb.bio).
+A minimalistic new tab page inspired by my friend's portfolio, [neb.bio](https://neb.bio).
 
 ![example image](https://cdn.dan.onl/22/08/04294--2022-08-14--20-57-46.png)
 
