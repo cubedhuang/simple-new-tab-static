@@ -8,12 +8,33 @@ addEventListener("focus", () => {
 	document.body.classList.remove("unfocused");
 });
 
+// ----- Links -----
+
+const links = document.getElementById("links");
+
+links.innerHTML = Object.entries(Config.Links)
+	.map(
+		([name, links]) => `
+		<div>
+			<h2>${name}</h2>
+			<ul>
+				${links
+					.map(
+						({ name, url }) =>
+							`<li><a href="${url}">${name}</a></li>`
+					)
+					.join("")}
+			</ul>
+		</div>`
+	)
+	.join("");
+
 // ----- Quote -----
 
 const quote = document.getElementById("quote");
 const quoteAuthor = document.getElementById("quote-author");
 
-fetch("https://api.quotable.io/random?tags=future|technology|science|time")
+fetch(`https://api.quotable.io/random?tags=${Config.QuoteTags.join("|")}`)
 	.then(res => res.json())
 	.then(data => {
 		quote.textContent = `"${data.content}"`;
@@ -79,7 +100,7 @@ const weatherData = localStorage.getItem("weatherData");
 const weatherDataTime = localStorage.getItem("weatherDataTime");
 
 if (!weatherData || Date.now() - weatherDataTime > 600_000) {
-	const weatherAPI = `https://api.openweathermap.org/data/2.5/weather?units=imperial&appid=${Keys.Weather}`;
+	const weatherAPI = `https://api.openweathermap.org/data/2.5/weather?units=imperial&appid=${Config.WeatherKey}`;
 
 	navigator.geolocation.getCurrentPosition(position => {
 		const lat = position.coords.latitude;
@@ -103,7 +124,7 @@ if (!weatherData || Date.now() - weatherDataTime > 600_000) {
 const presenceElement = document.getElementById("presence");
 
 lanyard({
-	userId: "299707523370319883"
+	userId: Config.DiscordUser
 }).then(presence => {
 	presenceElement.innerHTML =
 		`<div>
