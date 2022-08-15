@@ -7,7 +7,7 @@ A minimalistic new tab page, inspired by my friend's portfolio, [neb.bio](https:
 ## How to Use
 
 1. Clone this repository.
-2. Rename `config.example.json` to `config.json`, and fill in the required fields like Discord ID and Weather API key. You can add your own links to customize your page!
+2. Rename `config.example.js` to `config.js`, and fill in the required fields like Discord ID and Weather API key. You can add your own links to customize your page!
 3. Add as an unpacked extension to the Chromium-based browser of your choice.
 4. Open a new tab and enjoy!
 
