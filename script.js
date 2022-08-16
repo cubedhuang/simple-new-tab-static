@@ -121,12 +121,12 @@ if (!weatherData || Date.now() - weatherDataTime > 600_000) {
 
 // ----- Presence -----
 
-const presenceElement = document.getElementById("presence");
+const discord = document.getElementById("discord");
 
 lanyard({
 	userId: Config.DiscordUser
 }).then(presence => {
-	presenceElement.innerHTML =
+	discord.innerHTML =
 		`<div>
 			<h2>Discord</h2>
 			<p>${presence.discord_user.username}#${presence.discord_user.discriminator}</p>
